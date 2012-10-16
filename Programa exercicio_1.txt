@@ -1,0 +1,60 @@
+Programa exercicio_1
+var
+	inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
+    caractere: cont = 's';
+inicio
+    cand1  <- 0;
+    cand2  <- 0;
+    cand3  <- 0;
+    cand4  <- 0;
+    branco <- 0;
+    nulo   <- 0;
+    total  <- 0;
+	enquanto (cont = "s" ou cont = "sim")
+        total++;
+        escreva ("Digite o número do seu candidato:");
+        escreva ("1-Tiririca");
+        escreva ("2-Batoré");
+        escreva ("3-Vovó da Fiel");
+        escreva ("4-Mulher Pêra");
+        escreva ("5-Branco");
+        escreva ("");
+        leia (num_voto);
+
+        escolha (num_voto)
+            caso 1
+                cand_1 ++;
+
+            caso 2
+                cand_2 ++;
+
+            caso 3
+                cand_3 ++;
+
+            caso 4
+                cand_4 ++;
+
+            caso 5
+                branco ++;
+
+            senão
+                nulo ++;
+
+        fim escolha
+
+        escreva ("Mais algum eleitor para votar?[s/n]");
+        leia (cont);
+    fim enquanto
+
+    escreva ("Apuração dos votos");
+    escreva ("Votos para Tiririca: ", cand_1);
+    escreva ("Votos para Batoré: ", cand_2);
+    escreva ("Votos para Vovó da Fiel: ", cand_3);
+    escreva ("Votos para Mulher Pêra: ", cand_4);
+    escreva ("");
+    escreva ("Votos nulos: " , nulo);
+    escreva ("Votos em branco: ", branco);
+    escreva ("");
+    escreva ("A percentagem de votos nulos sobre o total de votos: ", nulo * total / 100);
+    escreva ("A percentagem de votos em branco sobre o total de votos: ", branco * total / 100);
+fim.
