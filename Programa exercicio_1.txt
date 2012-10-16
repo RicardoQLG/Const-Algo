@@ -1,7 +1,7 @@
 Programa exercicio_1
 var
 	inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
-    caractere: cont = 's';
+    caractere: cont;
 inicio
     cand1  <- 0;
     cand2  <- 0;
@@ -10,6 +10,7 @@ inicio
     branco <- 0;
     nulo   <- 0;
     total  <- 0;
+    cont   <- 's';
 	enquanto (cont = "s" ou cont = "sim")
         total++;
         escreva ("Digite o número do seu candidato:");
