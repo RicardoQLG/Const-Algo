@@ -1,6 +1,4 @@
 Programa exercicio_1
-$coloc = 1111AAS
-const AAAA;
 var
 	inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
     caractere: cont;
