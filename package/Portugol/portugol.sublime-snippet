@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[Programa $0
+Var
+	$1
+Inicio
+	$2
+Fim.]]></content>
+	<tabTrigger>prog</tabTrigger>
+	<scope>text.portugol</scope>
+</snippet>
