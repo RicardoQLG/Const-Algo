@@ -3,26 +3,26 @@ var
 	inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
     caractere: cont;
 inicio
-    cand1  <- 0;
-    cand2  <- 0;
-    cand3  <- 0;
-    cand4  <- 0;
+    cand_1 <- 0;
+    cand_2 <- 0;
+    cand_3 <- 0;
+    cand_4 <- 0;
     branco <- 0;
     nulo   <- 0;
     total  <- 0;
     cont   <- 's';
 	enquanto (cont = "s" ou cont = "sim")
         total++;
-        escreva ("Digite o número do seu candidato:");
-        escreva ("1-Tiririca");
-        escreva ("2-Batoré");
-        escreva ("3-Vovó da Fiel");
-        escreva ("4-Mulher Pêra");
-        escreva ("5-Branco");
-        escreva ("");
-        leia (num_voto);
+        Escreva ("Digite o número do seu candidato:");
+        Escreva ("1-Tiririca");
+        Escreva ("2-Batoré");
+        Escreva ("3-Vovó da Fiel");
+        Escreva ("4-Mulher Pêra");
+        Escreva ("5-Branco");
+        Escreva ("");
+        Leia (num_voto);
 
-        escolha (num_voto)
+        Escolha (num_voto)
             caso 1
                 cand_1 ++;
 
