@@ -1,0 +1,89 @@
+Programa Exercicio_4
+Var
+	Inteiro:   prd_0_2, prd_1_2, prd_2_2, prd_3_2, prd_4_2, prd_5_2, prd_6_2;
+	Real:      prd_0_1, prd_1_1, prd_2_1, prd_3_1, prd_4_1, prd_5_1, prd_6_1;
+	Caractere: prd_0_0, prd_1_0, prd_2_0, prd_3_0, prd_4_0, prd_5_0, prd_6_0;
+	Inteiro:   cdg_produto, qtd_produto;
+	Real:	   total, vl_produto;
+	Caractere: continuar, lista_produtos;
+Inicio
+	continuar     <- 's';
+	lista_produto <- '';
+
+	prd_0_0 <- 'Cachorro quente ';
+	prd_1_0 <- 'Bauru Simples   ';
+	prd_2_0 <- 'Bauru com Ovo   ';
+	prd_3_0 <- 'X-Burguer       ';
+	prd_4_0 <- 'X-Salada        ';
+	prd_5_0 <- 'Refrigerante    ';
+	prd_6_0 <- 'Suco Natural    ';
+
+	prd_0_1 <- 3.20;
+	prd_1_1 <- 4.00;
+	prd_2_1 <- 4.50;
+	prd_3_1 <- 5.20;
+	prd_4_1 <- 5.80;
+	prd_5_1 <- 2.50;
+	prd_6_1 <- 3.00;
+
+	prd_0_2 <- 100;
+	prd_1_2 <- 101;
+	prd_2_2 <- 102;
+	prd_3_2 <- 103;
+	prd_4_2 <- 104;
+	prd_5_2 <- 105;
+	prd_6_2 <- 106;
+
+	Enquanto (continuar = 's')
+		Escreva ("Digite o código do produto:");
+		Leia (cdg_produto);
+
+		Escreva ("Digite a quantidade:");
+		Leia (qtd_produto);
+
+		vl_produto <- 0;
+
+		Se (cdg_produto = prd_0_2)
+			vl_produto = qtd_produto * prd_0_1;
+			lista_produtos = lista_produtos + prd_0_0 + prd_0_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_1_2)
+			vl_produto = qtd_produto * prd_1_1;
+			lista_produtos = lista_produtos + prd_1_0 + prd_1_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_2_2)
+			vl_produto = qtd_produto * prd_2_1;
+			lista_produtos = lista_produtos + prd_2_0 + prd_2_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_3_2)
+			vl_produto = qtd_produto * prd_3_1;
+			lista_produtos = lista_produtos + prd_3_0 + prd_3_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_4_2)
+			vl_produto = qtd_produto * prd_4_1;
+			lista_produtos = lista_produtos + prd_4_0 + prd_4_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_5_2)
+			vl_produto = qtd_produto * prd_5_1;
+			lista_produtos = lista_produtos + prd_5_0 + prd_5_1 + " " + vl_produto + "\r";
+		Fim se
+
+		Se (cdg_produto = prd_6_2)
+			vl_produto = qtd_produto * prd_6_1;
+			lista_produtos = lista_produtos + prd_6_0 + prd_6_1 + " " + vl_produto + "\r";
+		Fim se
+
+		total = total + vl_produto;
+		Escreva("deseja adicionar mais um produto?");
+		leia(continuar);
+
+	Fim enquanto
+
+	Escreva (lista_podutos);
+	Escreva ("total:" + total);
+Fim.
