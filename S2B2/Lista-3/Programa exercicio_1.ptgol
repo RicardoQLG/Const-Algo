@@ -1,8 +1,8 @@
 Programa exercicio_1
-var
+Var
 	inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
     caractere: cont;
-inicio
+Inicio
     cand_1 <- 0;
     cand_2 <- 0;
     cand_3 <- 0;
@@ -11,7 +11,7 @@ inicio
     nulo   <- 0;
     total  <- 0;
     cont   <- 's';
-	enquanto (cont = "s" ou cont = "sim")
+	Enquanto (cont = "s" ou cont = "sim")
         total++;
         Escreva ("Digite o número do seu candidato:");
         Escreva ("1-Tiririca");
@@ -23,39 +23,39 @@ inicio
         Leia (num_voto);
 
         Escolha (num_voto)
-            caso 1
+            Caso 1
                 cand_1 ++;
 
-            caso 2
+            Caso 2
                 cand_2 ++;
 
-            caso 3
+            Caso 3
                 cand_3 ++;
 
-            caso 4
+            Caso 4
                 cand_4 ++;
 
-            caso 5
+            Caso 5
                 branco ++;
 
-            senão
+            Senão
                 nulo ++;
 
-        fim escolha
+        Fim escolha
 
-        escreva ("Mais algum eleitor para votar?[s/n]");
-        leia (cont);
-    fim enquanto
+        Escreva ("Mais algum eleitor para votar?[s/n]");
+        Leia (cont);
+    Fim enquanto
 
-    escreva ("Apuração dos votos");
-    escreva ("Votos para Tiririca: ", cand_1);
-    escreva ("Votos para Batoré: ", cand_2);
-    escreva ("Votos para Vovó da Fiel: ", cand_3);
-    escreva ("Votos para Mulher Pêra: ", cand_4);
-    escreva ("");
-    escreva ("Votos nulos: " , nulo);
-    escreva ("Votos em branco: ", branco);
-    escreva ("");
-    escreva ("A percentagem de votos nulos sobre o total de votos: ", nulo * total / 100);
-    escreva ("A percentagem de votos em branco sobre o total de votos: ", branco * total / 100);
-fim.
+    Escreva ("Apuração dos votos");
+    Escreva ("Votos para Tiririca: ", cand_1);
+    Escreva ("Votos para Batoré: ", cand_2);
+    Escreva ("Votos para Vovó da Fiel: ", cand_3);
+    Escreva ("Votos para Mulher Pêra: ", cand_4);
+    Escreva ("");
+    Escreva ("Votos nulos: " , nulo);
+    Escreva ("Votos em branco: ", branco);
+    Escreva ("");
+    Escreva ("A percentagem de votos nulos sobre o total de votos: ", nulo * total / 100);
+    Escreva ("A percentagem de votos em branco sobre o total de votos: ", branco * total / 100);
+Fim.
