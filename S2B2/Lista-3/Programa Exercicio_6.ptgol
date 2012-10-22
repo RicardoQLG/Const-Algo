@@ -1,8 +1,8 @@
 Programa Exercicio_6
 Var
-	Inteiro: idade, maior_idade, menor_idade, mulheres, total_entrevistados;
+	Inteiro:   idade, maior_idade, menor_idade, mulheres, total_entrevistados;
 	Caractere: sexo;
-	Real: salario, total_salarial;
+	Real:      salario, total_salarial;
 Inicio
 	total_entrevistados <- 0;
 	idade               <- 0;

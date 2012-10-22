@@ -91,5 +91,5 @@ Inicio
         Escreva ("");
         Escreva ("DeSeja avaliar mais um competidor: [s/n]");
         Leia (cont);
-    fim enquanto
-fim.
+    Fim enquanto
+Fim.
