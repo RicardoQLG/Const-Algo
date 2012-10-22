@@ -1,0 +1,345 @@
+Programa exercicio_1
+Var
+    Inteiro:   cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
+    Caractere: cont;
+Inicio
+    cand_1 <- 0;
+    cand_2 <- 0;
+    cand_3 <- 0;
+    cand_4 <- 0;
+    branco <- 0;
+    nulo   <- 0;
+    total  <- 0;
+    cont   <- 's';
+    Enquanto (cont = "s" ou cont = "sim")
+        total++;
+        Escreva ("Digite o número do seu candidato:");
+        Escreva ("1-Tiririca");
+        Escreva ("2-Batoré");
+        Escreva ("3-Vovó da Fiel");
+        Escreva ("4-Mulher Pêra");
+        Escreva ("5-Branco");
+        Escreva ("");
+        Leia (num_voto);
+
+        Escolha (num_voto)
+            Caso 1
+                cand_1 ++;
+
+            Caso 2
+                cand_2 ++;
+
+            Caso 3
+                cand_3 ++;
+
+            Caso 4
+                cand_4 ++;
+
+            Caso 5
+                branco ++;
+
+            Senão
+                nulo ++;
+
+        Fim escolha
+
+        Escreva ("Mais algum eleitor para votar?[s/n]");
+        Leia (cont);
+    Fim enquanto
+
+    Escreva ("Apuração dos votos");
+    Escreva ("Votos para Tiririca: ", cand_1);
+    Escreva ("Votos para Batoré: ", cand_2);
+    Escreva ("Votos para Vovó da Fiel: ", cand_3);
+    Escreva ("Votos para Mulher Pêra: ", cand_4);
+    Escreva ("");
+    Escreva ("Votos nulos: " , nulo);
+    Escreva ("Votos em branco: ", branco);
+    Escreva ("");
+    Escreva ("A percentagem de votos nulos sobre o total de votos: ", nulo * total / 100);
+    Escreva ("A percentagem de votos em branco sobre o total de votos: ", branco * total / 100);
+Fim.
+
+Programa exercicio_2
+Var
+    Inteiro: num, b1, b2, b3, b4;
+Inicio
+    num <- 0;
+    Enquanto (num >= 0)
+        Escreva ("Digite um numero acima de 0 para ser registrado. (-1 para encerrar)");
+        Leia (num);
+
+        Se (num >= 0 e num <= 25)
+            b1++;
+        Fim se
+
+        Se (num > 25 e num <= 50)
+            b2++;
+        Fim se
+
+        Se (num > 50 e num <= 75)
+            b3++;
+        Fim se
+
+        Se (num > 75 e num <= 100)
+            b4++;
+        Fim se
+    Fim enquanto
+
+    Escreva ("São ", b1, " numeros entre 0 e 25");
+    Escreva ("São ", b2, " numeros entre 26 e 50");
+    Escreva ("São ", b3, " numeros entre 51 e 75");
+    Escreva ("São ", b4, " numeros entre 76 e 100");
+fim.
+
+Programa exercicio_3
+Var
+    Real:      n1, n2, n3, n4, n5, n6, n7, media, maior, menor;
+    Caractere: nome, cont;
+Inicio
+    cont <- 's';
+
+    Enquanto (cont = 's' ou cont = 'sim')
+        Escreva ("Qual o nome do competidor?");
+        Leia (nome);
+
+        Escreva ("Qual a nota 1:");
+        Leia (n1);
+
+        maior <- n1;
+        menor <- n1;
+
+        Escreva ("Qual a nota 2:");
+        Leia (n2);
+
+        Se (n2 > maior) então
+            maior <- n2;
+        Fim se
+
+        Se (n2 < menor) então
+            menor <- n2;
+        Fim se
+
+        Escreva ("Qual a nota 3:");
+        Leia (n3);
+
+        Se (n3 > maior) então
+            maior <- n3;
+        Fim se
+
+        Se (n3 < menor) então
+            menor <- n3;
+        Fim se
+
+        Escreva ("Qual a nota 4:");
+        Leia (n4);
+
+        Se (n4 > maior) então
+            maior <- n4;
+        Fim se
+
+        Se (n4 < menor) então
+            menor <- n4;
+        Fim se
+
+        Escreva ("Qual a nota 5:");
+        Leia (n5);
+
+        Se (n5 > maior) então
+            maior <- n5;
+        Fim se
+
+        Se (n5 < menor) então
+            menor <- n5;
+        Fim se
+
+        Escreva ("Qual a nota 6:");
+        Leia (n6);
+
+        Se (n6 > maior) então
+            maior <- n6;
+        Fim se
+
+        Se (n6 < menor) então
+            menor <- n6;
+        Fim se
+
+        Escreva ("Qual a nota 7:");
+        Leia (n7);
+
+        Se (n7 > maior) então
+            maior <- n7;
+        Fim se
+
+        Se (n7 < menor) então
+            menor <- n7;
+        Fim se
+
+        media <- (n1 + n2 + n3 + n4 + n5 + n6 + n7 - maior - menor) / 5;
+
+        Escreva ("resultado final:");
+        Escreva ("Atleta: ", nome);
+        Escreva ("Melhor nota: ", maior);
+        Escreva ("Pior nota: ", menor);
+        Escreva ("Média: ", media);
+        Escreva ("");
+        Escreva ("DeSeja avaliar mais um competidor: [s/n]");
+        Leia (cont);
+    Fim enquanto
+Fim.
+
+Programa Exercicio_4
+Var
+    Inteiro:   prd_0_2, prd_1_2, prd_2_2, prd_3_2, prd_4_2, prd_5_2, prd_6_2;
+    Real:      prd_0_1, prd_1_1, prd_2_1, prd_3_1, prd_4_1, prd_5_1, prd_6_1;
+    Caractere: prd_0_0, prd_1_0, prd_2_0, prd_3_0, prd_4_0, prd_5_0, prd_6_0;
+    Inteiro:   cdg_produto, qtd_produto;
+    Real:      total, vl_produto;
+    Caractere: continuar, lista_produtos;
+Inicio
+    continuar     <- 's';
+    lista_produto <- '';
+
+    prd_0_0 <- 'Cachorro quente ';
+    prd_1_0 <- 'Bauru Simples   ';
+    prd_2_0 <- 'Bauru com Ovo   ';
+    prd_3_0 <- 'X-Burguer       ';
+    prd_4_0 <- 'X-Salada        ';
+    prd_5_0 <- 'Refrigerante    ';
+    prd_6_0 <- 'Suco Natural    ';
+
+    prd_0_1 <- 3.20;
+    prd_1_1 <- 4.00;
+    prd_2_1 <- 4.50;
+    prd_3_1 <- 5.20;
+    prd_4_1 <- 5.80;
+    prd_5_1 <- 2.50;
+    prd_6_1 <- 3.00;
+
+    prd_0_2 <- 100;
+    prd_1_2 <- 101;
+    prd_2_2 <- 102;
+    prd_3_2 <- 103;
+    prd_4_2 <- 104;
+    prd_5_2 <- 105;
+    prd_6_2 <- 106;
+
+    Enquanto (continuar = 's')
+        Escreva ("Digite o código do produto:");
+        Leia (cdg_produto);
+
+        Escreva ("Digite a quantidade:");
+        Leia (qtd_produto);
+
+        vl_produto <- 0;
+
+        Se (cdg_produto = prd_0_2)
+            vl_produto = qtd_produto * prd_0_1;
+            lista_produtos = lista_produtos + prd_0_0 + prd_0_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_1_2)
+            vl_produto = qtd_produto * prd_1_1;
+            lista_produtos = lista_produtos + prd_1_0 + prd_1_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_2_2)
+            vl_produto = qtd_produto * prd_2_1;
+            lista_produtos = lista_produtos + prd_2_0 + prd_2_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_3_2)
+            vl_produto = qtd_produto * prd_3_1;
+            lista_produtos = lista_produtos + prd_3_0 + prd_3_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_4_2)
+            vl_produto = qtd_produto * prd_4_1;
+            lista_produtos = lista_produtos + prd_4_0 + prd_4_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_5_2)
+            vl_produto = qtd_produto * prd_5_1;
+            lista_produtos = lista_produtos + prd_5_0 + prd_5_1 + " " + vl_produto + "\r";
+        Fim se
+
+        Se (cdg_produto = prd_6_2)
+            vl_produto = qtd_produto * prd_6_1;
+            lista_produtos = lista_produtos + prd_6_0 + prd_6_1 + " " + vl_produto + "\r";
+        Fim se
+
+        total = total + vl_produto;
+        Escreva("deseja adicionar mais um produto?");
+        leia(continuar);
+
+    Fim enquanto
+
+    Escreva (lista_podutos);
+    Escreva ("total:" + total);
+Fim.
+
+Programa Exercicio_5
+Var
+    Inteiro: num, num_orig, fac;
+Inicio
+    Escreva("Digite um número:");
+    Leia(num);
+
+    num_orig <- num;
+    fac      <- 1;
+
+    Enquanto (num > 1)
+        fac <- fac * num;
+        num <- num - 1;
+    Fim enquanto
+
+    Escreva (num_orig, "! = ", fac);
+Fim.
+
+Programa Exercicio_6
+Var
+    Inteiro:   idade, maior_idade, menor_idade, mulheres, total_entrevistados;
+    Caractere: sexo;
+    Real:      salario, total_salarial;
+Inicio
+    total_entrevistados <- 0;
+    idade               <- 0;
+    maior_idade         <- 0;
+    menor_idade         <- 1000;
+    mulheres            <- 0;
+    total_salarial      <- 0;
+
+    Enquanto (idade >= 0)
+        Escreva ("Digite a idade do entrevistado numero ", total_entrevistados + 1, ":")
+        Leia (idade);
+
+        Se (idade >= 0) então
+            Escreva ("Digite o sexo:");
+            Leia (sexo);
+
+            Escreva ("Digite o salário:");
+            Leia (salario);
+
+            total_salarial <- total_salarial + salario;
+
+            Se (sexo = 'F' e salario < 1200) então
+                mulheres <- mulheres + 1;
+            Fim se
+
+            Se (idade < menor_idade) então
+                menor_idade <- idade;
+            Fim se
+
+            Se (idade > maior_idade) então
+                maior_idade <= idade;
+            Fim se
+
+            total_entrevistados <- total_entrevistados + 1;
+        Fim se
+    Fim enquanto
+
+    Escreva ("Média salárial do grupo :", total_salarial / total_entrevistados);
+    Escreva ("Maior idade do grupo:    ", maior_idade);
+    Escreva ("Menor idade do grupo:    ", menor_idade);
+    Escreva ("Mulheres com salário até R$1200,00: ", mulheres);
+Fim.
