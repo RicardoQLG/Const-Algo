@@ -14,5 +14,4 @@ Inicio
 	Fim enquanto
 
 	Escreva (num_orig, "! = ", fac);
-	Se (a=1) Então
 Fim.
