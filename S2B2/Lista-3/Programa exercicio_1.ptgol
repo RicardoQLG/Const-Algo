@@ -22,26 +22,19 @@ Inicio
         Escreva ("");
         Leia (num_voto);
 
-        Escolha (num_voto)
-            Caso 1
-                cand_1 ++;
-
-            Caso 2
-                cand_2 ++;
-
-            Caso 3
-                cand_3 ++;
-
-            Caso 4
-                cand_4 ++;
-
-            Caso 5
-                branco ++;
-
-            Senão
-                nulo ++;
-
-        Fim escolha
+        Se (num_voto = 1) Então
+            cand_1 ++;
+        Senão Se (num_voto = 2) Então
+            cand_2 ++;
+        Senão Se (num_voto = 3) Então
+            cand_3 ++;
+        Senão Se (num_voto = 4) Então
+            cand_4 ++;
+        Senão Se (num_voto = 5) Então
+            branco ++;
+        Senão
+            nulo ++;
+        Fim se
 
         Escreva ("Mais algum eleitor para votar?[s/n]");
         Leia (cont);
