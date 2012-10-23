@@ -7,19 +7,19 @@ Iinicio
         Escreva ("Digite um numero acima de 0 para ser registrado. (-1 para encerrar)");
         Leia (num);
 
-        Se (num >= 0 e num <= 25)
+        Se (num >= 0 e num <= 25) Então
             b1++;
         Fim se
 
-        Se (num > 25 e num <= 50)
+        Se (num > 25 e num <= 50) Então
             b2++;
         Fim se
 
-        Se (num > 50 e num <= 75)
+        Se (num > 50 e num <= 75) Então
             b3++;
         Fim se
 
-        Se (num > 75 e num <= 100)
+        Se (num > 75 e num <= 100) Então
             b4++;
         Fim se
     Fim enquanto

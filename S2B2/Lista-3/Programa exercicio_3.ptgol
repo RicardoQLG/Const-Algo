@@ -18,66 +18,66 @@ Inicio
         Escreva ("Qual a nota 2:");
         Leia (n2);
 
-        Se (n2 > maior) então
+        Se (n2 > maior) Então
             maior <- n2;
         Fim se
 
-        Se (n2 < menor) então
+        Se (n2 < menor) Então
             menor <- n2;
         Fim se
 
         Escreva ("Qual a nota 3:");
         Leia (n3);
 
-        Se (n3 > maior) então
+        Se (n3 > maior) Então
             maior <- n3;
         Fim se
 
-        Se (n3 < menor) então
+        Se (n3 < menor) Então
             menor <- n3;
         Fim se
 
         Escreva ("Qual a nota 4:");
         Leia (n4);
 
-        Se (n4 > maior) então
+        Se (n4 > maior) Então
             maior <- n4;
         Fim se
 
-        Se (n4 < menor) então
+        Se (n4 < menor) Então
             menor <- n4;
         Fim se
 
         Escreva ("Qual a nota 5:");
         Leia (n5);
 
-        Se (n5 > maior) então
+        Se (n5 > maior) Então
             maior <- n5;
         Fim se
 
-        Se (n5 < menor) então
+        Se (n5 < menor) Então
             menor <- n5;
         Fim se
 
         Escreva ("Qual a nota 6:");
         Leia (n6);
 
-        Se (n6 > maior) então
+        Se (n6 > maior) Então
             maior <- n6;
         Fim se
 
-        Se (n6 < menor) então
+        Se (n6 < menor) Então
             menor <- n6;
         Fim se
 
         Escreva ("Qual a nota 7:");
         Leia (n7);
 
-        Se (n7 > maior) então
+        Se (n7 > maior) Então
             maior <- n7;
         Fim se
 
-        Se (n7 < menor) então
+        Se (n7 < menor) Então
             menor <- n7;
         Fim se
 
