@@ -1,0 +1,47 @@
+Programa Exercicio_6
+Var
+	Inteiro:   idade, maior_idade, menor_idade, mulheres, total_entrevistados;
+	Caractere: sexo;
+	Real:      salario, total_salarial;
+Inicio
+	total_entrevistados <- 0;
+	idade               <- 0;
+	maior_idade         <- 0;
+	menor_idade         <- 1000;
+	mulheres            <- 0;
+	total_salarial      <- 0;
+
+	Enquanto (idade >= 0)
+		Escreva ("Digite a idade do entrevistado numero ", total_entrevistados + 1, ":")
+		Leia (idade);
+
+		Se (idade >= 0) então
+			Escreva ("Digite o sexo:");
+			Leia (sexo);
+
+			Escreva ("Digite o salário:");
+			Leia (salario);
+
+			total_salarial <- total_salarial + salario;
+
+			Se (sexo = 'F' e salario < 1200) então
+				mulheres <- mulheres + 1;
+			Fim se
+
+			Se (idade < menor_idade) então
+				menor_idade <- idade;
+			Fim se
+
+			Se (idade > maior_idade) então
+				maior_idade <= idade;
+			Fim se
+
+			total_entrevistados <- total_entrevistados + 1;
+		Fim se
+	Fim enquanto
+
+	Escreva ("Média salárial do grupo :", total_salarial / total_entrevistados);
+	Escreva ("Maior idade do grupo:    ", maior_idade);
+	Escreva ("Menor idade do grupo:    ", menor_idade);
+	Escreva ("Mulheres com salário até R$1200,00: ", mulheres);
+Fim.
