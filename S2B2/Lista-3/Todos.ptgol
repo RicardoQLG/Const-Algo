@@ -1,7 +1,7 @@
 Programa exercicio_1
 Var
-    Inteiro:   cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
-    Caractere: cont;
+    inteiro: cand_1, cand_2, cand_3, cand_4, branco, nulo, num_voto, total;
+    caractere: cont;
 Inicio
     cand_1 <- 0;
     cand_2 <- 0;
@@ -22,26 +22,19 @@ Inicio
         Escreva ("");
         Leia (num_voto);
 
-        Escolha (num_voto)
-            Caso 1
-                cand_1 ++;
-
-            Caso 2
-                cand_2 ++;
-
-            Caso 3
-                cand_3 ++;
-
-            Caso 4
-                cand_4 ++;
-
-            Caso 5
-                branco ++;
-
-            Senão
-                nulo ++;
-
-        Fim escolha
+        Se (num_voto = 1) Então
+            cand_1 ++;
+        Senão Se (num_voto = 2) Então
+            cand_2 ++;
+        Senão Se (num_voto = 3) Então
+            cand_3 ++;
+        Senão Se (num_voto = 4) Então
+            cand_4 ++;
+        Senão Se (num_voto = 5) Então
+            branco ++;
+        Senão
+            nulo ++;
+        Fim se
 
         Escreva ("Mais algum eleitor para votar?[s/n]");
         Leia (cont);
@@ -63,25 +56,25 @@ Fim.
 Programa exercicio_2
 Var
     Inteiro: num, b1, b2, b3, b4;
-Inicio
+Iinicio
     num <- 0;
     Enquanto (num >= 0)
         Escreva ("Digite um numero acima de 0 para ser registrado. (-1 para encerrar)");
         Leia (num);
 
-        Se (num >= 0 e num <= 25)
+        Se (num >= 0 e num <= 25) Então
             b1++;
         Fim se
 
-        Se (num > 25 e num <= 50)
+        Se (num > 25 e num <= 50) Então
             b2++;
         Fim se
 
-        Se (num > 50 e num <= 75)
+        Se (num > 50 e num <= 75) Então
             b3++;
         Fim se
 
-        Se (num > 75 e num <= 100)
+        Se (num > 75 e num <= 100) Então
             b4++;
         Fim se
     Fim enquanto
@@ -90,7 +83,7 @@ Inicio
     Escreva ("São ", b2, " numeros entre 26 e 50");
     Escreva ("São ", b3, " numeros entre 51 e 75");
     Escreva ("São ", b4, " numeros entre 76 e 100");
-fim.
+Fim.
 
 Programa exercicio_3
 Var
@@ -112,66 +105,66 @@ Inicio
         Escreva ("Qual a nota 2:");
         Leia (n2);
 
-        Se (n2 > maior) então
+        Se (n2 > maior) Então
             maior <- n2;
         Fim se
 
-        Se (n2 < menor) então
+        Se (n2 < menor) Então
             menor <- n2;
         Fim se
 
         Escreva ("Qual a nota 3:");
         Leia (n3);
 
-        Se (n3 > maior) então
+        Se (n3 > maior) Então
             maior <- n3;
         Fim se
 
-        Se (n3 < menor) então
+        Se (n3 < menor) Então
             menor <- n3;
         Fim se
 
         Escreva ("Qual a nota 4:");
         Leia (n4);
 
-        Se (n4 > maior) então
+        Se (n4 > maior) Então
             maior <- n4;
         Fim se
 
-        Se (n4 < menor) então
+        Se (n4 < menor) Então
             menor <- n4;
         Fim se
 
         Escreva ("Qual a nota 5:");
         Leia (n5);
 
-        Se (n5 > maior) então
+        Se (n5 > maior) Então
             maior <- n5;
         Fim se
 
-        Se (n5 < menor) então
+        Se (n5 < menor) Então
             menor <- n5;
         Fim se
 
         Escreva ("Qual a nota 6:");
         Leia (n6);
 
-        Se (n6 > maior) então
+        Se (n6 > maior) Então
             maior <- n6;
         Fim se
 
-        Se (n6 < menor) então
+        Se (n6 < menor) Então
             menor <- n6;
         Fim se
 
         Escreva ("Qual a nota 7:");
         Leia (n7);
 
-        Se (n7 > maior) então
+        Se (n7 > maior) Então
             maior <- n7;
         Fim se
 
-        Se (n7 < menor) então
+        Se (n7 < menor) Então
             menor <- n7;
         Fim se
 
@@ -233,37 +226,37 @@ Inicio
 
         vl_produto <- 0;
 
-        Se (cdg_produto = prd_0_2)
+        Se (cdg_produto = prd_0_2) Então
             vl_produto = qtd_produto * prd_0_1;
             lista_produtos = lista_produtos + prd_0_0 + prd_0_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_1_2)
+        Se (cdg_produto = prd_1_2) Então
             vl_produto = qtd_produto * prd_1_1;
             lista_produtos = lista_produtos + prd_1_0 + prd_1_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_2_2)
+        Se (cdg_produto = prd_2_2) Então
             vl_produto = qtd_produto * prd_2_1;
             lista_produtos = lista_produtos + prd_2_0 + prd_2_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_3_2)
+        Se (cdg_produto = prd_3_2) Então
             vl_produto = qtd_produto * prd_3_1;
             lista_produtos = lista_produtos + prd_3_0 + prd_3_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_4_2)
+        Se (cdg_produto = prd_4_2) Então
             vl_produto = qtd_produto * prd_4_1;
             lista_produtos = lista_produtos + prd_4_0 + prd_4_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_5_2)
+        Se (cdg_produto = prd_5_2) Então
             vl_produto = qtd_produto * prd_5_1;
             lista_produtos = lista_produtos + prd_5_0 + prd_5_1 + " " + vl_produto + "\r";
         Fim se
 
-        Se (cdg_produto = prd_6_2)
+        Se (cdg_produto = prd_6_2) Então
             vl_produto = qtd_produto * prd_6_1;
             lista_produtos = lista_produtos + prd_6_0 + prd_6_1 + " " + vl_produto + "\r";
         Fim se
