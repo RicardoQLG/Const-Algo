@@ -84,6 +84,6 @@ Inicio
 
 	Fim enquanto
 
-	Escreva (lista_podutos);
+	Escreva (lista_produtos);
 	Escreva ("total:" + total);
 Fim.

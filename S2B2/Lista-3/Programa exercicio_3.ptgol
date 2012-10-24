@@ -89,7 +89,7 @@ Inicio
         Escreva ("Pior nota: ", menor);
         Escreva ("Média: ", media);
         Escreva ("");
-        Escreva ("DeSeja avaliar mais um competidor: [s/n]");
+        Escreva ("Deseja avaliar mais um competidor: [s/n]");
         Leia (cont);
     Fim enquanto
 Fim.
