@@ -1,0 +1,40 @@
+programa abono_salarial
+Constate
+    PISO   = 100;
+    PERC   = 0.2;
+    N_FUNC = 10;
+Var
+    Real: total_abono, maior_abono, minimo;
+    Inteiro: indice_maior_abono, recebe_minimo;
+    Matriz[1..N_FUNC] de Real: salarios, abonos, novo_salario;
+    Matriz[1..N_FUNC] de Caractere: nomes;
+    Inteiro: contador;
+Inicio
+    total_abono <- 0;
+    recebe_minimo <- 0;
+
+    Para contador de 1 ate N_FUNC faça
+        Escreva("Digite o nome do funcionário ", contador);
+        Leia(nomes[contador]);
+
+        Escreva("Digite o salário do funcionário ", nomes[contador]);
+        Leia(salarios[contador]);
+
+        abonos[contador] = salario[contador] * PERC;
+
+        Se (abonos[contador] < 100) Então
+            abonos[contador] = 100;
+        Fim se
+
+        Se (abonos[contador] = 100) Então
+            recebe_minimo = recebe_minimo + 1;
+        Fim se
+
+        total_abono = total_abono + abonos[contador];
+
+        Se (abonos[contador] > maior_abono) Então
+            maior_abono = abonos[contador];
+            indice_maior_abono = contador;
+        Fim se
+
+Fim.
