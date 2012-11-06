@@ -1,6 +1,6 @@
-programa abono_salarial
-Constate
-    PISO   = 100;
+programa Exercicio_1
+Constante
+    PISO   = 300;
     PERC   = 0.2;
     N_FUNC = 10;
 Var
@@ -23,18 +23,27 @@ Inicio
         abonos[contador] = salario[contador] * PERC;
 
         Se (abonos[contador] < 100) Então
-            abonos[contador] = 100;
+            abonos[contador] <- 100;
         Fim se
 
         Se (abonos[contador] = 100) Então
-            recebe_minimo = recebe_minimo + 1;
+            recebe_minimo <- recebe_minimo + 1;
         Fim se
 
         total_abono = total_abono + abonos[contador];
 
         Se (abonos[contador] > maior_abono) Então
-            maior_abono = abonos[contador];
-            indice_maior_abono = contador;
+            maior_abono <- abonos[contador];
+            indice_maior_abono <- contador;
         Fim se
 
+        Escreva ("Nome do funcionário:"nomes[contador]);
+        Escreva ("Salário antigo:", salarios[contador]);
+        Escreva ("Abono salárial:", abonos[contador]);
+        Escreva ("Salário novo:", abonos[contador] + salarios[contador]);
+    Fim para
+
+    Escreva ("Total gasto com abono:", total_abono);
+    Escreva (recebe_minimo, " funcionários receberão o minimo de R$100,00");
+    Escreva ("O Colaborador ", nomes[indice_maior_abono], " receberá um abono de ", abonos[indice_maior_abono], " sendo o colaborador com maior abono.");
 Fim.
