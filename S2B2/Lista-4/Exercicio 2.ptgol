@@ -1,0 +1,50 @@
+Programa exercicio_2
+Constante
+	N_VENDEDOR = 20;
+	CASA    = 1;
+	APTO    = 2;
+	TERRENO = 3;
+Var
+	Matriz[1..N_VENDEDOR] de Inteiro: cdg_vendedor, tp_imovel;
+	Matriz[1..N_VENDEDOR] de Real: vl_venda;
+	Inteiro: cdg_maior_venda, qtd_venda_casa, i;
+	Real: media_vendas, maior_venda;
+
+Inicio
+	maior_venda <- 0;
+	cdg_maior_venda <- 0;
+	media_vendas <- 0;
+
+	Para i de 1 ate N_VENDEDOR faca
+		Escreva("Digite o código do vendedor:");
+		Leia(cdg_vendedor[i]);
+
+		Escreva("Digite o tipo de imovel:");
+		Escreva(CASA , " - CASA");
+		Escreva(APTO , " - APTO");
+		Escreva(TERRENO , " - TERRENO");
+		Leia(tp_imovel[i]);
+
+		Escreva ("Digite o valor da venda:");
+		Leia(vl_venda[i]);
+
+		Se (vl_venda[i] > maior_venda) Então
+			maior_venda <- vl_venda[i];
+			cdg_maior_venda <- cdg_vendedor[i];
+		Fim se
+
+		media_vendas = media_vendas + vl_venda[i];
+
+		Se (tp_imovel[i] = CASA) Então
+			qtd_venda_casa <- qtd_venda_casa + 1;
+		Fim se
+	Fim para
+
+	media_vendas <- media_vendas / 20;
+
+	Escreva("O vendedor com a maior venda é:", cdg_maior_venda);
+	Escreva("A média de vendas é de:", media_vendas);
+	Escreva("Quantidade de casas:", qtd_venda_casa);
+	Escreva("Percentual de casas:", qtd_venda_casa * 100 / N_VENDEDOR);
+
+Fim.

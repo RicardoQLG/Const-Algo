@@ -1,0 +1,35 @@
+Programa Exercicio_3
+Constante
+	N = 8;
+
+Var
+	Inteiro: i, desordem, r;
+	Matriz[1..N] de Inteiro: num;
+
+Inicio
+	desordem <- 0;
+
+	Para i de 1 até N faça
+		Escreva("Entre com o numero");
+		Leia(num[i]);
+	Fim para
+
+	Enquanto desordem = 0
+		desordem <- 1;
+
+		Para i de 1 até N - 1 faça
+			Se (num[i] > num[i+1]) Então
+				r <- num[i];
+				num[i] <- num[i+1];
+				num[i+1] <- num[i];
+
+				desordem <- 0;
+			Fim se
+		Fim para
+	Fim enquanto
+
+	Para i de 1 até N faça
+		Escreva(i, ": ", num[i]);
+
+	Fim Para
+Fim.

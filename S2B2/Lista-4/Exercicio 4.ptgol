@@ -1,0 +1,19 @@
+Programa Exercicio_4
+Constante
+	N = 10;
+
+Var
+	Inteiro: i;
+	Matriz[1..N] de Inteiro: num;
+
+Inicio
+	Para i de 1 até N faça
+		Escreva("Entre com o numero:");
+		Leia(num[i]);
+	Fim para
+
+	Para i de 1 até N faça
+		Escreva(num[N-i+1]);
+	Fim para
+
+Fim.

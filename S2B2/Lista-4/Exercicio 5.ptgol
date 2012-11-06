@@ -1,0 +1,37 @@
+Programa Exercicio_5
+Constante
+	N = 5;
+	KM = 2000;
+	CUSTO = 2.45;
+Var
+	Matriz[1..N] de Caractere: modelo;
+	Matriz[1..N] de Inteiro: consumo;
+
+	Inteiro: ind_economico, vl_cons_economico, gasto_km;
+	Real: media;
+
+Inicio
+	vl_cons_economico <- -1;
+	Para i de 1 até N faça
+		Escreva("Entre com o modelo:");
+		Leia(modelo[i]);
+
+		Escreva("Entre com o consumo km/l:");
+		Leia(consumo[i]);
+
+		Se (consumo[i] < vl_cons_economico ou vl_cons_economico = -1) Então
+			vl_cons_economico <- consumo[i];
+			ind_economico  <- i;
+		Fim se
+
+		media <- media + consumo[i];
+	Fim para
+
+	Escreva("O modelo mais economico é:", modelo[i]);
+	Escreva("A média de km/l é de:", media / N);
+
+	Para i de 1 até N faça
+		gasto_km <- consumo[i] * KM;
+		Escreva("O modelo ", modelo[i], " consome ",gasto_km , " para percorrer", KM, "custando R$", gasto_km * CUSTO);
+	Fim para
+Fim.
