@@ -1,0 +1,53 @@
+Programa Exemplo_registro
+Const
+    N_VAL = 10;
+
+Var
+    Tipo RegVendas = Regitro
+        Inteiro: id_vendedor, numero;
+        Real: valor_venda;
+        Caractere: rua;
+    Fim registro
+
+    Matriz[1..N_VAL] de RegVendas: vendas;
+    RegVendas: aux_venda;
+
+    Inteiro: i, desordem;
+
+Inicio
+    i <- 1;
+    desordem <- 1;
+
+    Enquanto i <= N_VAL
+        Escreva("Digite os dado abaixo para a venda ", i + 1);
+        Escreva("id do vendedor:");
+        Leia(vendas[i].id_vendedor);
+        
+        Escreva("Logradouro:");
+        Leia(vendas[i].rua);
+        
+        Escreva("Número:");
+        Leia(vendas[i].numero);
+        
+        Escreva("valor:");
+        Leia(vendas[i].valor);
+        
+    Fim enquanto
+
+    Enquanto (desordem = 1)
+        desordem <- 0;
+        Para i de 1 até N_VAL-1 faça
+            Se vendas[i].valor < vendas[i+1].valor então
+                aux_venda <- vendas[i];
+                vendas[i] <- vendas[i+1];
+                vendas[i+1] <- vendas[i];
+
+                desordem <- 1;
+            Fim se
+        Fim para
+    Fim enquanto
+
+    Para i de 1 até N_VAL faça
+        Escreva (vendas[i].logradouro, " n°", vendas[i].numero,"\n");
+    Fim para
+Fim.
